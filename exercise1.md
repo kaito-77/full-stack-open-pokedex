@@ -1,0 +1,9 @@
+### 1
+tesing: Python has two main frameworks to make unit testing easier: `unittest` and `PyTest`.[nose](https://nose.readthedocs.org/en/latest/) is an extension to unittest that makes it easier to create and execute test cases.[Hypothesis](http://hypothesis.readthedocs.io/en/latest/index.html) is a unit test-generation tool that assists developers in creating tests that exercise edge cases in code blocks.[mimesis](https://github.com/lk-geimfari/mimesis) generates synthetic test data which is useful to apply in your tests.[testify](https://github.com/Yelp/Testify/) was a testing framework meant to replace the common unittest+nose combination.
+building: `setup.py` is the traditional method for defining package metadata and dependencies. It uses `setuptools` or `distutils` to specify how the package should be built and installed. `pyproject.toml` file is now the preferred, modern way to configure Python projects. It separates the build system configuration from package metadata and supports multiple build systems (like `setuptools`, `flit`, `poetry`, etc.).
+### 2
+GitLab is a comprehensive DevOps platform that provides code hosting, CI/CD, code review, issue tracking, container registry and other functions.
+CircleCI is recommended for small projects where the main goal is to start integration as soon as possible.
+Travis CI is recommended when you are working on open source projects that should be tested in different environments.
+### 3
+In a cloud-hosted setup, setting up the environment is not something you need to worry about. CircleCI is a cloud-based system - no dedicated server required and you don't have to manage it. If you want to make customizations, there may be some problems: you may need some third-party software to make these adjustments. Also, while being a cloud-based system is an advantage on one side, it can also stop supporting any software and you will not be able to stop.
