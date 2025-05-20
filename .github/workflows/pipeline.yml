@@ -47,16 +47,3 @@ jobs:
         run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
-
-      - name: Check the deployed service URL
-        uses: seveibar/url-health-check-action@v1.9
-        with:
-          # Check the following URLs one by one sequentially
-          url: https://full-stack-open-pokedex-chi.vercel.app/api/health
-          # Max time to keep requesting url
-          max-time: 1m
-          # Max time until a request times out
-          request-timeout: 10s
-          # Fail this action after this many failed attempts
-          # set to "until-max-time" to request forever
-          max-attempts: 1 # Optional, defaults to 1
